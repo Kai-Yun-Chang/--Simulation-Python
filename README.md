@@ -43,7 +43,7 @@ graph TD
         S4 -->|進入下個月模擬| S1
     end
 
-    style Dead fill:#ffe9ef
+    style Dead fill:#ffe9ef,stroke:#ffdee7
     style Alive fill:#c8e6c9,stroke:#2e7d32
     %% 樣式設定
     style Simulation fill:#c0d9d9,stroke:#01579b,stroke-width:2px
