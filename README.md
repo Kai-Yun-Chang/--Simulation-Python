@@ -35,10 +35,11 @@ graph TD
     subgraph Simulation [蒙地卡羅個體模擬流程]
         S1[隨機抽樣死亡判定] -->|U < qx| Dead[死亡: 觸發理賠]
         S1 -->|U >= qx| Alive[生存]
-        Alive --> |AV不足 lapse| Lapse[失效: surrender value]
-        Alive --> S2[存續: 模擬標的資產路徑: GBM]
-        S2 --> S3[套用保單結構更新AV]
         Dead --> DB[計算給付額: Basic/Ratchet/Roll-up]
+        Alive --> |AV不足 lapse| Lapse[失效: surrender value]
+        Alive --> |存續|S2[模擬標的資產路徑: GBM]
+        S2 --> S3[套用保單結構更新AV]
+       
         
         S3 -->|進入下個月模擬| S1
     end
@@ -47,14 +48,6 @@ graph TD
     style Alive fill:#ffe9ef,stroke:#ffdee7
     style Simulation fill:#c0d9d9,stroke:#01579b,stroke-width:2px
 ```
-
-```mermaid
-graph LR
-    %% 主流程
-    Input[保單設計與精算因子] --> Risk-neutral[風險中立評價精確定價]
-    Input[保單設計與精算因子] --> Simulation[蒙地卡羅模擬流程]
-    Simulation --> Result[Final Price & Risk Metrics]
-    Risk-neutral --> Result[Final Price & Risk Metrics]
 
     %% 蒙地卡羅詳細步驟 (子圖)
     subgraph Simulation [蒙地卡羅個體模擬流程]
@@ -66,12 +59,6 @@ graph LR
         Dead --> S3[計算給付額: Basic/Ratchet/Roll-up]
         
         S4 -->|進入下個月模擬| S1
-    end
-
-    style Dead fill:#ffe9ef,stroke:#ffdee7
-    style Alive fill:#ffe9ef,stroke:#ffdee7
-    style Simulation fill:#c0d9d9,stroke:#01579b,stroke-width:2px
-```
     
 Fund Return Simulation
 ↓
