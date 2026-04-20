@@ -65,6 +65,23 @@ Profit Calculation
 ### 2. Death Benefit (DB)
 - 高 AV 情境：三者趨於一致
 - 低 AV 情境：差異顯著（Roll-up 最高）
+| Metric                            | Basic          | Ratchet        | Roll-up        |
+|:----------------------------------|:---------------|:---------------|:---------------|
+| Unconditional Mean Death Benefit  | 149,716.5961   | 153,065.4375   | 197,812.8873   |
+| Unconditional P95 Death Benefit   | 1,600,000.0000 | 1,600,000.0000 | 2,249,143.0553 |
+| Unconditional P99 Death Benefit   | 2,256,778.8593 | 2,256,778.8593 | 2,798,707.3177 |
+| Unconditional Mean Guarantee Cost | 26,248.5322    | 29,597.3736    | 74,344.8234    |
+| Unconditional Trigger Rate        | 0.0560         | 0.0670         | 0.0760         |
+| Unconditional P95 Guarantee Cost  | 45,490.3692    | 178,829.3543   | 776,388.3348   |
+| Unconditional P99 Guarantee Cost  | 678,173.4643   | 678,173.4643   | 1,528,437.5385 |
+
+| Metric                           | Basic          | Ratchet        | Roll-up        |
+|:---------------------------------|:---------------|:---------------|:---------------|
+| Conditional Mean Death Benefit   | 1,825,812.1478 | 1,866,651.6769 | 2,412,352.2847 |
+| Conditional Median Death Benefit | 1,600,000.0000 | 1,600,000.0000 | 2,456,184.9075 |
+| Conditional P95 Death Benefit    | 3,004,062.7230 | 3,017,255.3892 | 3,011,555.8759 |
+| Conditional P99 Death Benefit    | 3,651,355.1438 | 3,651,355.1438 | 3,651,355.1438 |
+
 
 ![圖片描述](Images/db.png)
 ![圖片描述](Images/dbkde.png)
@@ -74,6 +91,14 @@ Profit Calculation
 
 - Basic < Ratchet < Roll-up
 - Roll-up 顯著增加 tail risk
+
+| Metric                                     | Basic        | Ratchet      | Roll-up        |
+|:-------------------------------------------|:-------------|:-------------|:---------------|
+| Conditional Mean Guarantee Cost            | 320,104.0512 | 360,943.5802 | 906,644.1881   |
+| Conditional Trigger Rate                   | 0.6829       | 0.8171       | 0.9268         |
+| Conditional P95 Guarantee Cost             | 916,126.4385 | 916,126.4385 | 1,662,081.2362 |
+| Conditional P99 Guarantee Cost             | 977,597.9856 | 977,597.9856 | 2,125,561.9181 |
+| Worst 5% Mean Guarantee Cost (Conditional) | 954,618.2510 | 954,618.2510 | 1,955,866.0768 |
 
 ![圖片描述](Images/gc.png)
 ![圖片描述](Images/gckde.png)
