@@ -46,7 +46,7 @@ graph TD
     style Dead fill:#ffcdd2,stroke:#c62828
     style Alive fill:#c8e6c9,stroke:#2e7d32
     %% 樣式設定
-    style Simulation fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+    style Simulation fill:#e6f7ff,stroke:#01579b,stroke-width:2px
     style Result fill:#f9f,stroke:#333,stroke-width:2px
 ```
 
