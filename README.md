@@ -25,13 +25,22 @@
 
 ```mermaid
 graph TD
+    A[市場假設與精算因子] --> B(定義保證機制: Basic/Ratchet/Roll-up)
+    B --> C[蒙地卡羅模擬: 100,000 路徑]
+    C --> D{評價給付現金流}
+    D --> E[折現計算 GMDB 淨成本]
+    E --> F[🔍 風險敏感度分析與定價結論]
+    
+    style F fill:#f9f,stroke:#333,stroke-width:2px
+
+graph TD
     A[輸入參數: 利率, 波動率, 死亡率] --> B{選擇保證機制}
     B -->|Basic| C[計算 Return of Premium]
     B -->|Ratchet| D[計算最高鎖定價值]
     B -->|Roll-up| E[計算複利保證價值]
     C & D & E --> F[蒙地卡羅隨機路徑模擬]
     F --> G[風險中立評價精確定價]
-    G --> H[🔍 產出損失與利潤分布圖]```
+    G --> H[🔍 產出損失與利潤分布圖]
     
 Fund Return Simulation
 ↓
