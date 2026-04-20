@@ -24,7 +24,7 @@
 ### Simulation Flow
 
 <br>
-
+```mermaid
 flowchart TD
 
     A[市場假設與精算因子] --> B(定義保證機制: Basic/Ratchet/Roll-up)
@@ -34,7 +34,7 @@ flowchart TD
     E --> F[🔍 風險敏感度分析與定價結論]
     
     style F fill:#f9f,stroke:#333,stroke-width:2px
-
+```
     
 
 graph TD
