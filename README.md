@@ -63,7 +63,7 @@ Profit Calculation
 ---
 
 ### 2. Death Benefit (DB)
-- 高 AV 情境：三者趨於一致 (p95 非常接近、 p99 完全一樣，顯示極端情境主要由高帳戶價值(報酬表現非常好的情況) 主導，而非 guarantee 結構。
+- 高 AV 情境：三者趨於一致 (p95 非常接近、 p99 完全一樣，顯示極端情境由高帳戶價值(報酬表現非常好的情況) 主導，非 guarantee 結構。
 - 低 AV 情境：差異顯著（Roll-up 提高死亡給付的平均值與中位數)
 
 | Metric                           | Basic          | Ratchet        | Roll-up        |
