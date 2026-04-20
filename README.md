@@ -58,6 +58,7 @@ Profit Calculation
 ### 1. Account Value (AV)
 
 - 三種設計 AV 路徑相同 (因目前保證結構設計不影響投資績效、Fee、COI)
+    
 ![圖片描述](Images/av.png)
 ---
 
@@ -65,6 +66,8 @@ Profit Calculation
 - 高 AV 情境：三者趨於一致
 - 低 AV 情境：差異顯著（Roll-up 最高）
 
+![圖片描述](Images/db.png)
+![圖片描述](Images/dbkde.png)
 ---
 
 ### 3. Guarantee Cost (GC)
