@@ -40,6 +40,7 @@ graph TD
     Logic --> Ratchet
     Logic --> Rollup
     end
+    
 
     Guarantee_Mechanisms --> Simulation[Monte Carlo Simulation]
     Simulation --> Result[Final Price & Risk Metrics]
