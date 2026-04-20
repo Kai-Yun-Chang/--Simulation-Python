@@ -32,12 +32,22 @@ graph TD
     Risk-neutral --> Result[Final Price & Risk Metrics]
 
     %% 蒙地卡羅詳細步驟 (子圖)
-    subgraph Simulation [蒙地卡羅詳細流程]
-        S1[初始化模擬路徑: GBM模型] --> S2[產生隨機變數: 100,000 次]
-        S2 --> S3[逐期計算AV、保證給付金額]
-        S3 --> S4[折現回期初價值]
+    subgraph Simulation [蒙地卡羅個體模擬流程]
+        S1[模擬標的資產路徑: GBM] --> S2[每月初資產價值檢核]
+        S2 --> S3{隨機抽樣死亡判定}
+        
+        S3 -->|U < qx| Dead[判定死亡: 觸發 GMDB 理賠]
+        S3 -->|U >= qx| Alive[判定生存: 進入下一個月模擬]
+        
+        Dead --> S4[根據機制計算給付額: Basic/Ratchet/Roll-up]
+        S4 --> S5[折現回期初]
+        
+        Alive -->|合約未到期| S1
+        Alive -->|合約到期| End[滿期給付或結束]
     end
 
+    style Dead fill:#ffcdd2,stroke:#c62828
+    style Alive fill:#c8e6c9,stroke:#2e7d32
     %% 樣式設定
     style Simulation fill:#e1f5fe,stroke:#01579b,stroke-width:2px
     style Result fill:#f9f,stroke:#333,stroke-width:2px
