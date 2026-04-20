@@ -63,8 +63,8 @@ Profit Calculation
 ---
 
 ### 2. Death Benefit (DB)
-- 高 AV 情境：三者趨於一致
-- 低 AV 情境：差異顯著（Roll-up 最高）
+- 高 AV 情境：三者趨於一致 (p95 非常接近、 p99 完全一樣，顯示極端情境主要由高帳戶價值(報酬表現非常好的情況) 主導，而非 guarantee 結構。
+- 低 AV 情境：差異顯著（Roll-up 提高死亡給付的平均值與中位數)
 
 | Metric                           | Basic          | Ratchet        | Roll-up        |
 |:---------------------------------|:---------------|:---------------|:---------------|
@@ -165,7 +165,7 @@ Small Gain (frequent) + Large Loss (rare)
 
 - Profit analysis
 - Pricing
-- Risk management
+
 
 ---
 
@@ -190,11 +190,8 @@ Small Gain (frequent) + Large Loss (rare)
 
 ## 📌 Conclusion
 
-GMDB 商品的核心風險來自於下檔保障機制。  
-不同設計對平均結果影響有限，但對尾端風險與經濟成本具有決定性影響。
+1. GMDB 商品的核心風險來自於下檔保障機制不同， GMDB 設計在一般情境下的損益分布相近，但其差異主要來自少數極端虧損情境，因此平均結果的差異主要由 tail risk 所驅動，而GMDB 設計對尾端風險影響更為明顯。
+2. Ratchet 屬於相對低成本的保障升級；Roll-up 雖提供較高保障，但需搭配更高費率或風險管理機制。
 
-👉 本研究顯示：
-
-> 產品設計的關鍵在於控制 tail risk，而非提升平均報酬。
 
 ---
