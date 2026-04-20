@@ -23,7 +23,7 @@
 
 ### Simulation Flow
 
-<br>
+<pre>
 ```mermaid
 flowchart TD
 
@@ -35,7 +35,7 @@ flowchart TD
     
     style F fill:#f9f,stroke:#333,stroke-width:2px
 ```
-    
+</pre>    
 
 graph TD
     A[輸入參數: 利率, 波動率, 死亡率] --> B{選擇保證機制}
