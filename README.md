@@ -25,10 +25,22 @@
 
 ```mermaid
 graph TD
-A[保單設計: 保費, 波動率, 死亡率...] --> B{選擇機制}
-B -->|Basic| C[Return of Premium]
-C --> D[Monte Carlo Simulation]
-D --> F[🔍 Final Pricing]  
+    %% 主流程
+    Input[保單設計與精算因子] --> Mechanism{選擇機制}
+    Mechanism --> Simulation[蒙地卡羅模擬流程]
+    Simulation --> Risk-neutral[風險中立評價精確定價]
+    Risk-neutral --> Result[Final Price & Risk Metrics]
+
+    %% 蒙地卡羅詳細步驟 (子圖)
+    subgraph Simulation [蒙地卡羅詳細流程]
+        S1[初始化模擬路徑: GBM模型] --> S2[產生隨機變數: 100,000 次]
+        S2 --> S3[逐期計算AV、保證給付金額]
+        S3 --> S4[折現回期初價值]
+    end
+
+    %% 樣式設定
+    style Simulation fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+    style Result fill:#f9f,stroke:#333,stroke-width:2px
 ```
 
 graph TD
