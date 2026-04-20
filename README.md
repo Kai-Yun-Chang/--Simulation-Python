@@ -23,19 +23,19 @@
 
 ### Simulation Flow
 
-<pre>
-```mermaid
-flowchart TD
 
-    A[市場假設與精算因子] --> B(定義保證機制: Basic/Ratchet/Roll-up)
-    B --> C[蒙地卡羅模擬: 100,000 路徑]
-    C --> D{評價給付現金流}
-    D --> E[折現計算 GMDB 淨成本]
-    E --> F[🔍 風險敏感度分析與定價結論]
-    
-    style F fill:#f9f,stroke:#333,stroke-width:2px
-```
-</pre>    
+
+```mermaid
+graph TD
+A[輸入參數] --> B{選擇機制}
+B -->|Basic| C[Return of Premium]
+B -->|Ratchet| D[Highest Anniversary]
+B -->|Roll-up| E[Compound Interest]
+C --> F[Monte Carlo Simulation]
+D --> F
+E --> F
+F --> G[🔍 Final Pricing]  
+
 
 graph TD
     A[輸入參數: 利率, 波動率, 死亡率] --> B{選擇保證機制}
