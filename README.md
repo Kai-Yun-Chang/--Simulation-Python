@@ -34,7 +34,7 @@ graph TD
     %% 蒙地卡羅詳細步驟 (子圖)
     subgraph Simulation [蒙地卡羅個體模擬流程]
         S1[模擬標的資產路徑: GBM] --> S2[隨機抽樣死亡判定]
-        S2 -->|U < qx| Dead[死亡: 觸發 GMDB 理賠]
+        S2 -->|U < qx| Dead[死亡: 觸發理賠]
         S2 -->|U >= qx| Alive[生存]
         Alive --> |AV不足 lapse| Lapse[失效: surrender value]
         Alive --> S4[存續: 套用保單結構更新AV]
@@ -44,8 +44,7 @@ graph TD
     end
 
     style Dead fill:#ffe9ef,stroke:#ffdee7
-    style Alive fill:#c8e6c9,stroke:#2e7d32
-    %% 樣式設定
+    style Alive fill:#ffe9ef,stroke:#ffdee7
     style Simulation fill:#c0d9d9,stroke:#01579b,stroke-width:2px
 ```
 
