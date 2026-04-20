@@ -24,7 +24,6 @@
 ### Simulation Flow
 
 ```mermaid
-
 graph TD
     A[輸入參數: 利率, 波動率, 死亡率] --> B{選擇保證機制}
     B -->|Basic| C[計算 Return of Premium]
@@ -32,7 +31,7 @@ graph TD
     B -->|Roll-up| E[計算複利保證價值]
     C & D & E --> F[蒙地卡羅隨機路徑模擬]
     F --> G[風險中立評價精確定價]
-    G --> H[🔍 產出損失與利潤分布圖]
+    G --> H[🔍 產出損失與利潤分布圖]```
     
 Fund Return Simulation
 ↓
