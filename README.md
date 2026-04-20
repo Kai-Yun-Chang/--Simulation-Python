@@ -65,15 +65,6 @@ Profit Calculation
 ### 2. Death Benefit (DB)
 - 高 AV 情境：三者趨於一致
 - 低 AV 情境：差異顯著（Roll-up 最高）
-| Metric                            | Basic          | Ratchet        | Roll-up        |
-|:----------------------------------|:---------------|:---------------|:---------------|
-| Unconditional Mean Death Benefit  | 149,716.5961   | 153,065.4375   | 197,812.8873   |
-| Unconditional P95 Death Benefit   | 1,600,000.0000 | 1,600,000.0000 | 2,249,143.0553 |
-| Unconditional P99 Death Benefit   | 2,256,778.8593 | 2,256,778.8593 | 2,798,707.3177 |
-| Unconditional Mean Guarantee Cost | 26,248.5322    | 29,597.3736    | 74,344.8234    |
-| Unconditional Trigger Rate        | 0.0560         | 0.0670         | 0.0760         |
-| Unconditional P95 Guarantee Cost  | 45,490.3692    | 178,829.3543   | 776,388.3348   |
-| Unconditional P99 Guarantee Cost  | 678,173.4643   | 678,173.4643   | 1,528,437.5385 |
 
 | Metric                           | Basic          | Ratchet        | Roll-up        |
 |:---------------------------------|:---------------|:---------------|:---------------|
@@ -119,7 +110,8 @@ Profit Calculation
 | Basic | Positive |
 | Ratchet | Slightly lower |
 | Roll-up | Negative |
----
+--
+
  | Metric    |            Basic |          Ratchet |          Roll-up |
 |:----------|-----------------:|-----------------:|-----------------:|
 | mean      |  16925.4         |  14559.2         | -18722.2         |
