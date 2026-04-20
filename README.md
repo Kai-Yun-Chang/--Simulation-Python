@@ -25,14 +25,10 @@
 
 ```mermaid
 graph TD
-A[輸入參數] --> B{選擇機制}
+A[保單設計: 保費, 波動率, 死亡率...] --> B{選擇機制}
 B -->|Basic| C[Return of Premium]
-B -->|Ratchet| D[Highest Anniversary]
-B -->|Roll-up| E[Compound Interest]
-C --> F[Monte Carlo Simulation]
-D --> F
-E --> F
-F --> G[🔍 Final Pricing]  
+C --> D[Monte Carlo Simulation]
+D --> F[🔍 Final Pricing]  
 ```
 
 graph TD
