@@ -146,6 +146,15 @@ Small Gain (frequent) + Large Loss (rare)
 | Ratchet | Slightly higher |
 | Roll-up | Significantly higher |
 
+<br>
+
+| Guarantee Type            |   GMDB Price |
+|:--------------------------|-------------:|
+| Basic (Return of Premium) |  25,280.0550 |
+| Ratchet                   |  26,208.6969 |
+| Roll-up                   |  68,236.2533 |
+
+
 ### Interpretation
 
 - GMDB ≈ Embedded Put Option
