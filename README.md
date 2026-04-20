@@ -119,6 +119,16 @@ Profit Calculation
 | Basic | Positive |
 | Ratchet | Slightly lower |
 | Roll-up | Negative |
+ | Metric    |            Basic |          Ratchet |          Roll-up |
+|:----------|-----------------:|-----------------:|-----------------:|
+| mean      |  16925.4         |  14559.2         | -18722.2         |
+| median    | 131455           | 131455           | 131455           |
+| p5        |     -1.14582e+06 |     -1.17861e+06 |     -1.67309e+06 |
+| p95       | 152408           | 152408           | 152408           |
+| p99       | 164026           | 164026           | 164026           |
+| loss_prob |      0.082       |      0.082       |      0.082       |
+
+
 
 ![圖片描述](Images/profit.png)
 
