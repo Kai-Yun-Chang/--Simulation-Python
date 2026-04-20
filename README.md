@@ -49,7 +49,7 @@ graph TD
 ```
 
 ```mermaid
-graph TD
+graph LR
     %% 主流程
     Input[保單設計與精算因子] --> Risk-neutral[風險中立評價精確定價]
     Input[保單設計與精算因子] --> Simulation[蒙地卡羅模擬流程]
