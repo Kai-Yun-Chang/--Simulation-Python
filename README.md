@@ -123,7 +123,7 @@ Profit Calculation
 | loss_prob | 0.0820          | 0.0820          | 0.0820          |
 
 
-![圖片描述](Images/profit.png)
+![採log scale](Images/profit.png)
 
 
 ### Insights
