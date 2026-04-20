@@ -2,7 +2,7 @@
 
 ## 📌 Project Overview
 
-本專案建立一個投資型壽險（Investment-Linked Insurance）之模擬模型，分析不同 GMDB（Guaranteed Minimum Death Benefit）設計對保單風險、成本與利潤的影響。透過 Monte Carlo 模擬與 Risk-Neutral 定價，本專案從Real-world simulation及Risk-neutral valuation兩個角度分析產品。
+### 本專案建立一個投資型壽險（Investment-Linked Insurance）之模擬模型，分析不同 GMDB（Guaranteed Minimum Death Benefit）設計對保單風險、成本與利潤的影響。透過 Monte Carlo 模擬與 Risk-Neutral 定價，本專案從Real-world simulation及Risk-neutral valuation兩個角度分析產品。
 ---
 
 ## 🎯 Objectives
