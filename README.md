@@ -23,8 +23,6 @@
 
 ### Simulation Flow
 
-
-
 ```mermaid
 graph TD
 A[輸入參數] --> B{選擇機制}
