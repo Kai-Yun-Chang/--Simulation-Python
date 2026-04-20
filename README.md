@@ -25,7 +25,8 @@
 
 <br>
 
-graph TD
+flowchart TD
+
     A[市場假設與精算因子] --> B(定義保證機制: Basic/Ratchet/Roll-up)
     B --> C[蒙地卡羅模擬: 100,000 路徑]
     C --> D{評價給付現金流}
