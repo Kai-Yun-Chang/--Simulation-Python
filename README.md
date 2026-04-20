@@ -26,13 +26,13 @@
 ```mermaid
 graph TD
     %% 主流程
-    Input[保單設計與精算因子] --> Mechanism{選擇機制}
+    Input[定義保單設計與精算因子] --> Mechanism{帳戶初始設定}
     Mechanism --> Simulation[蒙地卡羅模擬流程]
     Simulation --> Risk-neutral[風險中立評價精確定價]
     Risk-neutral --> Result[Final Price & Risk Metrics]
 
     %% 蒙地卡羅詳細步驟 (子圖)
-    subgraph Simulation [蒙地卡羅個體模擬流程]
+    subgraph Simulation [蒙地卡羅模擬流程]
         S1[隨機抽樣死亡判定] -->|U < qx| Dead[死亡: 觸發理賠]
         S1 -->|U >= qx| Alive[生存]
         Dead --> DB[計算給付額: Basic/Ratchet/Roll-up]
