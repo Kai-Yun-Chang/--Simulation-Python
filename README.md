@@ -29,7 +29,7 @@ graph TD
     Input[定義保單設計與精算因子] --> Mechanism{帳戶初始設定}
     Mechanism --> Simulation[蒙地卡羅模擬流程]
     Simulation --> Risk-neutral[改用Risk-neutral評價Guarantee cost]
-    Risk-neutral --> Result[Final Price & Risk Metrics]
+    Risk-neutral --> Result[DB, GC, Profit and Risk Metrics]
 
     %% 蒙地卡羅詳細步驟 (子圖)
     subgraph Simulation [蒙地卡羅模擬流程]
