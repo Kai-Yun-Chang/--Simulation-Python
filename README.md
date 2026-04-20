@@ -75,6 +75,8 @@ Profit Calculation
 - Basic < Ratchet < Roll-up
 - Roll-up 顯著增加 tail risk
 
+![圖片描述](Images/gc.png)
+![圖片描述](Images/gckde.png)
 ---
 
 ### 4. Tail Risk
@@ -92,6 +94,9 @@ Profit Calculation
 | Basic | Positive |
 | Ratchet | Slightly lower |
 | Roll-up | Negative |
+
+![圖片描述](Images/profit.png)
+
 
 ### Insights
 
