@@ -165,6 +165,14 @@ Small Gain (frequent) + Large Loss (rare)
 | Ratchet                   |  26,208.6969 |
 | Roll-up                   |  68,236.2533 |
 
+<br>
+
+ | Guarantee Type   | GMDB Price   |
+ |:-----------------|-------------:|
+ | Basic            | 34,097.4664  |
+ | Ratchet          | 34,792.2075  |
+ | Roll-up          | 77,164.1485  |
+
 
 ### Interpretation
 
