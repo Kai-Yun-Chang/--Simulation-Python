@@ -35,7 +35,7 @@ C --> F[Monte Carlo Simulation]
 D --> F
 E --> F
 F --> G[🔍 Final Pricing]  
-
+```
 
 graph TD
     A[輸入參數: 利率, 波動率, 死亡率] --> B{選擇保證機制}
