@@ -35,7 +35,7 @@ graph TD
     subgraph Simulation [蒙地卡羅模擬流程]
         S1[隨機抽樣死亡判定] -->|U < qx| Dead[死亡: 觸發理賠]
         S1 -->|U >= qx| Alive[生存]
-        Dead --> DB[計算給付額(DB)、GC: Basic/Ratchet/Roll-up]
+        Dead --> DB[計算給付額DB、GC: Basic/Ratchet/Roll-up]
         Alive --> |AV不足 lapse| Lapse[失效: surrender value]
         Alive --> |存續|S2[模擬標的資產路徑: GBM、套用保單結構更新AV]
         S2 --> |進入下個月模擬| S1
