@@ -33,14 +33,10 @@ graph TD
 
     %% 蒙地卡羅詳細步驟 (子圖)
     subgraph Simulation [蒙地卡羅個體模擬流程]
-        S1[模擬標的資產路徑: GBM] --> S2[每月初資產價值檢核]
-        S2 --> S3{隨機抽樣死亡判定}
-        
-        S3 -->|U < qx| Dead[判定死亡: 觸發 GMDB 理賠]
-        S3 -->|U >= qx| Alive[判定生存: 進入下一個月模擬]
-        
-        Dead --> S4[根據機制計算給付額: Basic/Ratchet/Roll-up]
-        S4 --> S5[折現回期初]
+        S1[模擬標的資產路徑: GBM] --> S2{隨機抽樣死亡判定}
+        S2 -->|U < qx| Dead[死亡: 觸發 GMDB 理賠]
+        S2 -->|U >= qx| Alive[生存: 進入下一個月模擬]
+        Dead --> S3[根據機制計算給付額: Basic/Ratchet/Roll-up]
         
         Alive -->|合約未到期| S1
         Alive -->|合約到期| End[滿期給付或結束]
