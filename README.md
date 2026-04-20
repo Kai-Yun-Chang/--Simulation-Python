@@ -28,7 +28,7 @@ graph TD
     %% 主流程
     Input[定義保單設計與精算因子] --> Mechanism{帳戶初始設定}
     Mechanism --> Simulation[蒙地卡羅模擬流程]
-    Simulation --> Risk-neutral[風險中立評價精確定價]
+    Simulation --> Risk-neutral[改用Risk-neutral評價Guarantee cost]
     Risk-neutral --> Result[Final Price & Risk Metrics]
 
     %% 蒙地卡羅詳細步驟 (子圖)
@@ -38,10 +38,7 @@ graph TD
         Dead --> DB[計算給付額: Basic/Ratchet/Roll-up]
         Alive --> |AV不足 lapse| Lapse[失效: surrender value]
         Alive --> |存續|S2[模擬標的資產路徑: GBM、套用保單結構更新AV]
-        S2 --> S3[套用保單結構更新AV]
-       
-        
-        S3 -->|進入下個月模擬| S1
+        S2 --> |進入下個月模擬| S1
     end
 
     style Dead fill:#ffe9ef,stroke:#ffdee7
