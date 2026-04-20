@@ -119,6 +119,7 @@ Profit Calculation
 | Basic | Positive |
 | Ratchet | Slightly lower |
 | Roll-up | Negative |
+---
  | Metric    |            Basic |          Ratchet |          Roll-up |
 |:----------|-----------------:|-----------------:|-----------------:|
 | mean      |  16925.4         |  14559.2         | -18722.2         |
