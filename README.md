@@ -23,6 +23,8 @@
 
 ### Simulation Flow
 
+<br>
+
 graph TD
     A[市場假設與精算因子] --> B(定義保證機制: Basic/Ratchet/Roll-up)
     B --> C[蒙地卡羅模擬: 100,000 路徑]
@@ -31,19 +33,8 @@ graph TD
     E --> F[🔍 風險敏感度分析與定價結論]
     
     style F fill:#f9f,stroke:#333,stroke-width:2px
-graph TD
-    Start[設定模型參數] --> Logic
-    
-    subgraph Guarantee_Mechanisms [保證給付機制]
-    Logic{商品選擇}
-    Logic --> Basic
-    Logic --> Ratchet
-    Logic --> Rollup
-    end
-    
 
-    Guarantee_Mechanisms --> Simulation[Monte Carlo Simulation]
-    Simulation --> Result[Final Price & Risk Metrics]
+    
 
 graph TD
     A[輸入參數: 利率, 波動率, 死亡率] --> B{選擇保證機制}
