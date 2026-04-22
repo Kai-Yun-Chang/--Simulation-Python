@@ -164,14 +164,6 @@ Small, stable gains (fees) + rare but severe losses (guarantee trigger)
 
 <br>
 
-| Guarantee Type            |   GMDB Price |
-|:--------------------------|-------------:|
-| Basic (Return of Premium) |  25,280.0550 |
-| Ratchet                   |  26,208.6969 |
-| Roll-up                   |  68,236.2533 |
-
-<br>
-
  | Guarantee Type   | GMDB Price   |
  |:-----------------|-------------:|
  | Basic            | 34,097.4664  |
