@@ -118,11 +118,13 @@ graph TD
 
 ## 💰 Profit Analysis
 
+Profit analysis 採 **fee-based** 觀點，聚焦於保險公司費用收入（COI 與 administrative fees）與保證成本（guarantee cost）之差額。因為帳戶價值（AV）屬於保戶資產，故未納入現金流之 inflow 或 outflow。
+
 | Design | Mean Profit |
 |--------|------------|
-| Basic | Positive |
+| Basic | Highest  |
 | Ratchet | Slightly lower |
-| Roll-up | Negative |
+| Roll-up | Lowest  |
 
 <br>
 
@@ -141,12 +143,13 @@ graph TD
 
 ### Insights
 
-- 大部分情境下保單穩定獲利（median 高）
-- 少數情境產生巨大虧損（tail risk）
-- Roll-up 出現 underpricing
+- 大部分情境下保單維持**穩定正利潤**（中位數高且 P95、P99 幾乎一致）
+- 各 GMDB 設計在**常態與上行情境下差異有限**
+- 利潤差異主要來自**尾端風險**產生巨大虧損
+- **Roll-up 顯著放大下檔風險**，在不利情境下產生較大虧損
 
 👉 結構類似：
-Small Gain (frequent) + Large Loss (rare)
+Small, stable gains (fees) + rare but severe losses (guarantee trigger)
 
 
 ---
