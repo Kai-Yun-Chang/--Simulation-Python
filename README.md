@@ -136,7 +136,7 @@ graph TD
 | loss_prob | 0.0440          | 0.0520          | 0.0720          |
 
 
-![採log scale](Images/profit.png)
+![採log scale](Images/fee_base_profit.png)
 
 
 ### Insights
